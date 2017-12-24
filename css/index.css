@@ -1,0 +1,560 @@
+/**********************************************测试属性****************************************************/
+#header,#person_extra,#banner,#photo_show,#koma_extra,#foot,#footer{
+	border:1px solid transparent;
+	box-sizing:border-box;
+	width: 1366px;
+	margin: 0 auto;
+}
+/*通用*/
+body{
+	width: 1366px;
+	font:12px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+	margin:0;
+	text-align: center;
+}
+ul,p,h1,h2,h3,h4,h5,h6,ol,dl,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+img{vertical-align:bottom;
+	display:block;	
+}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0700;
+	text-decoration:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+/***********************************************通用属性结束****************************************************/
+/*1、header部分*/
+#header{
+    width: 1411px;
+    background: black;
+}
+.menu {
+	width: 1411px;
+    height: 58px;
+}
+.menu>li:first-child a{
+	font-size: 60px;
+	color: #f00;
+}
+.menu li {
+	background: #000;
+    border-bottom: 2px solid #181818;
+    border-top: 2px solid #303030;
+    min-width: 160px;
+}
+.menu > li {
+    display: block;
+    float: left;
+    position: relative;
+}
+.menu > li:first-child {
+    border-radius: 5px 0 0;
+}
+.menu a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    border-right: 3px solid transparent;
+    color:#fff;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 27px;
+    line-height: 54px;
+    padding: 0 25px;
+}
+
+.menu li:hover {
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #222222;
+    border-top: 2px solid #1B1B1B;
+}
+.menu li:hover > a {
+    border-radius: 15px 15px 0 0;
+    border-left: 3px solid #f00;
+    border-right: 3px solid #f00;
+    color: #f00;
+}
+
+.submenu {
+	width: 100%;
+    max-height: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 0;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+    transform: rotateZ(90deg);
+    transition: opacity .4s, transform .5s;
+}
+.menu .submenu li:hover a {
+   /* border-bottom: 3px solid #f00;*/
+ 	border-right: 3px solid #f00;
+ 	border-left: 3px solid #f00;
+ 	border-radius: 0 0 15px 15px;
+    color: #f00;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu .submenu li a{
+	font-size: 17px;
+}
+.menu > li:hover .submenu, .menu > li:focus .submenu {
+    max-height: 2000px;
+    z-index: 100;
+}
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {
+    opacity: 1;
+    transform: none;
+}
+
+.menu li:hover .submenu li:nth-child(1) {
+    transition-delay: 0s;
+}
+.menu li:hover .submenu li:nth-child(2) {
+    transition-delay: 50ms;
+}
+.menu li:hover .submenu li:nth-child(3) {
+    transition-delay: 100ms;
+}
+.menu li:hover .submenu li:nth-child(4) {
+    transition-delay: 150ms;
+}
+
+
+.submenu li:nth-child(1) {
+    transition-delay: 350ms;
+}
+.submenu li:nth-child(2) {
+    transition-delay: 300ms;
+}
+.submenu li:nth-child(3) {
+    transition-delay: 250ms;
+}
+.submenu li:nth-child(4) {
+    transition-delay: 200ms;
+}
+video{
+	width: 64px;
+	height: 45px;
+}
+/*************************************************1、header部分结束***************************************/
+/**********************************2、中间nav and slider部分开始*****************************/
+/*2.1开始*/
+#nav>a:hover{
+	color: red;
+}
+#nav {
+	width: 1411px;
+	height:600px;
+	background:url(../黄家驹/22.jpg) no-repeat;
+	position: relative
+}
+#nav div.lf{
+	margin-top: 45px;
+}
+#nav ul.lf a:hover{
+	color: #f00;
+}
+#nav>ul>li{
+	float: left;
+	width: 120px;
+	border:1px solid white;
+	padding:10px;
+	margin-top: 40px;
+	margin-left:25px;
+	border-radius: 20px;
+}
+#nav>ul>li.introduce{
+	margin-left: 500px;
+}
+#nav>ul>li>a{
+	text-align: center;
+	color:#a8ff03;
+	font-size: 15px;
+}
+
+#nav  p{
+	width: 175px;
+	height: 90px;
+	border:1px solid #ddd;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 250px;
+	border-radius: 10px;
+}
+#nav  div.list{
+	float: left;
+	width:641px;
+	height:320px;
+	margin-top: 60px;
+	margin-left: 90px;
+	border:1px solid transparent;
+	box-sizing:border-box;
+	border-radius: 50px;
+	overflow: hidden;
+}
+/*2.1结束*/
+/*2.2广告轮播开始*/
+#nav div.clear:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+#slider {
+	width:640px;
+	height:318px;
+	position:relative;
+	overflow:hidden;
+}
+#slider #imgs {
+	position:absolute;
+	top: 0;  left: 0;
+	height:240px;
+}
+#slider #imgs li{
+	float:left;
+	z-index:0;
+}
+#slider #indexs {
+    position:absolute;
+    bottom:15px;
+    right:265px;
+}
+#silder #indexs ul{
+	float: left;
+}
+#slider #indexs li {
+	float: left;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    background: #3e3e3e;
+    color: #fff;    
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    margin-left:10px;
+}
+#slider #indexs li:hover,#slider #indexs li.hover {
+    background:#b61b1f;
+}
+/**2、轮播部分结束**/
+/**********************************2、中间nav and slider部分结束*****************************/
+/*****************************************3、preson_introduce开始*************************************************/
+#person_extra{
+	width: 1366px;
+	height: 355px;
+	margin: 0 auto;
+	background-color: white;
+}
+#person_extra .container{
+	position:relative;
+}
+#person_extra .circle{
+			width: 200px;
+		    height: 200px; 
+			border-radius:100px;
+			background:#faf;
+			margin-top: 50px;
+}
+#person_extra .circle:hover{
+			cursor: pointer;
+}
+
+#person_extra .container .circle:nth-child(1){
+			position:absolute; 
+			top:0;
+			left: 0px;
+			margin-left: 70px;
+}
+#person_extra .container .circle:nth-child(2){
+			position:absolute; 
+			top:0;
+			margin-left: 288px;
+}
+#person_extra .circle:nth-child(3){
+			position:absolute; 
+			top:0;
+			left: 500px;
+			margin-left: 514px;
+}
+#person_extra .circle:nth-child(4){
+			position:absolute; 
+			top:0;
+			left: 700px;
+			margin-left: 739px;
+}
+#person_extra .last:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+#person_extra h1{
+	font-size: 40px;
+	text-align: center;
+}
+#person_extra h2{
+	float: left;
+	font-size: 15px;
+	margin:100px 93px;
+}
+
+
+
+/*3、#person_extra结束*/
+/*************************************************4、人物介绍开始*************************************************/
+	/*****************1.家驹 贯中部分*****************/
+#banner{
+	background-color:#FFE103;
+	margin: 0 auto;
+}
+#banner #koma{
+	border:2px solid transparent;
+	transition: all 1s linear;
+	border-radius: 10px;
+}
+#banner #koma:hover{
+	border:2px solid #aaa;
+	padding:0;
+	color: orange;
+	box-shadow:0 0 100px #fd00ff;
+	background-color:#000;
+}
+#banner #Paul{
+	border:2px solid transparent;
+	transition: all 1s linear;
+	border-radius: 10px;
+}
+#banner #Paul:hover{
+	border:2px solid #aaa;
+	padding:0;
+	color: orange;
+	box-shadow:0 0 100px #fd00ff;
+	background-color:#000;
+}
+#banner div.person_introduce{
+	float: left;
+	width: 600px;
+	line-height: 50px;
+	margin:50px 110px;
+}
+#banner div.person_list{
+	margin-top: 57px;
+	float: left;
+}
+#banner h1{
+	font-size: 40px;
+	text-align: center;
+	color: #020202;
+}
+#banner h2{
+	color: #333;
+}
+#banner span{
+	font-size: 50px;
+}
+div.koma{
+	border-bottom: 1px solid white;
+}
+div.koma:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+	/******************2、家强  世荣部分***************/
+#banner div.SteveWong_introduce{
+	float: left;
+	margin:57px 110px;
+}
+#banner div.SteveWong_list{
+	float: left;
+	width:600px;
+	line-height: 50px;
+	margin:50px 10px;
+}
+#banner #Yip{
+	border:2px solid transparent;
+	transition: all 1s linear;
+	border-radius: 10px;
+}
+#banner #Yip:hover{
+	border:2px solid #aaa;
+	padding:0;
+	color: orange;
+	box-shadow:0 0 100px #fd00ff;
+	background-color:#000;
+}
+#banner #Steve{
+	border:2px solid transparent;
+	transition: all 1s linear;
+	border-radius: 10px;
+}
+#banner #Steve:hover{
+	border:2px solid #aaa;
+	padding:0;
+	color: orange;
+	box-shadow:0 0 100px #fd00ff;
+	background-color:#000;
+}
+div.SteveWong{
+	border-bottom: 1px solid white;
+}
+div.SteveWong:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/***************************************************4、人物介绍结束********************************************************/
+/*5、图片展示区开始*/
+
+/*5、图片展示结束*/
+/*************************************************怀念家驹区域 400*500*********************************************************/
+#koma_extra{
+	height: 800px;
+	margin: 0px auto;
+	background-color: #000;
+}
+#koma_extra h1{
+	text-align: center;
+	font-size: 35px;
+	margin-top: 20px;
+}
+
+#koma_extra div.div1{
+	margin-top: 50px;
+	margin-left: 110px;
+	margin-right: 100px;
+}
+#koma_extra div.div2{
+	margin-top:50px;
+	margin-left: 200px;
+}
+#koma_extra p{
+	border:1px solid transparent;
+	border-radius: 30px;
+	box-sizing:border-box;
+	font-size: 30px;
+	padding: 10px;
+	color: #fff;
+}
+#koma_extra div.div1 p{
+	width: 400px;
+	height: 100px;
+	background-color: #DB0080;
+	margin-top: 5px;
+	display: none;
+}
+#koma_extra div.div2 p{
+	width: 400px;
+	height: 100px;
+	background-color: #DB0080;
+	margin-bottom: 5px;
+	visibility: hidden;
+}
+#koma_extra div.div1:hover p{
+	display: block;
+}
+#koma_extra div.div2:hover p{
+	visibility: visible;
+}
+/******************************************************6、怀念家驹区域结束*********************************************/
+/*******************************************************7、beyond拓展区域开始*********************************************/
+#foot{
+	height:200px; 
+	margin:0 auto;
+	background-color:#fff;
+	text-align: center;
+}
+#foot li{
+	float:left;
+	width:100px;
+	height: 100px;
+	background-color: #3FC8F4;
+	border:2px solid #fff;
+	border-radius: 20px;
+	margin-left: 211px;
+	margin-top: 50px;
+	transition: all .7s linear;
+}
+#foot li a{
+	display: inline-block;
+	margin-top: 40px;
+	font-size: 20px;
+	transition: all .3s linear;
+}
+#foot li:hover{
+	background-color: white;
+	
+}
+#foot li:hover a{
+	margin-top: 30px;
+	font-size: 30px;
+}
+/************************************************7、beyond拓展区域结束****************************************************/
+/************************************************8、用户信息收集区域开始*************************************************/
+#footer{
+	margin: 0 auto;
+	background-color:black;
+}
+#footer p{
+	margin-top: 20px;
+	margin-left:-41px;
+}
+#footer input{
+	width: 398px;
+	height: 30px;
+	outline: none;
+	border:2px solid #DB0080;
+	background-color: #000;
+	color: red;
+	font-size: 25px;
+}
+#footer input.age{
+	border:2px solid #DB0080;
+	border-top: none;
+	border-right: none;
+}
+#footer input.sex{
+	border-top: none;
+}
+#footer textarea{
+	margin-left: -38px;
+	border: 2px solid #DB0080;
+	border-radius: 5px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background-color: black;
+	color: red;
+	outline: none;
+}
+#footer button{
+	width: 50px;
+	height: 30px;
+	border:1px solid transparent;
+	border-radius: 5px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #DB0080;
+	outline: none;
+	margin: 10px 573px;
+}
+/**************************8、用户信息收集区域结束******************************/
+/**************************9、返回顶部小按钮***********************************/
+#toTop{
+	position: fixed;
+	top:550px;
+	right:0;
+}
+/***************************9、返回顶部小按钮结束******************************/

@@ -1,0 +1,126 @@
+/******************************测试属性****************************************************/
+#banner,#main,#footer{
+	border:1px solid black;
+}
+/*通用*/
+body{
+	font:12px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+	margin:0;
+}
+ul,p,h1,h2,h3,h4,h5,h6,ol,dl,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+img{vertical-align:bottom;
+	display:block;	
+}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0700;
+	text-decoration:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+@keyframes scroll{
+	0%{
+		background-color:black;
+		border-radius: 30px;
+		font-weight: normal;
+	}
+	
+	100%{
+		background-color: yellow;
+		border-radius: 10px;
+		font-weight: bold;
+	}
+}
+/***************************************通用属性结束************************************/
+/*顶部设计开始*/
+#header{
+	width: 1411px;
+	height:100px;
+	background: black;
+}
+/*#header ul:after{
+	content:"";
+	display:block;
+	clear: both;
+}*/
+#header p{
+	float: left;
+	font-size: 40px;
+	line-height:80px;
+	margin-left: 170px;
+	margin-right:40px;
+	color:#f00;
+}
+#header li{
+	float: left;
+	line-height:90px;
+	font-size: 25px;
+	margin-left: 40px;
+}
+#header a{
+	color: white;
+	border:1px solid transparent;
+	box-sizing:border-box;
+	padding: 10px;
+	border-radius: 30px;
+}
+#header a:hover{
+	color: red;
+	text-decoration: none;
+	box-sizing:border-box;
+	background-color: yellow;
+	padding: 10px;
+	animation: scroll 1s linear forwards;
+	font-weight: bold;
+}
+/*底部设计结束*/
+/*中间slider部分开始*/
+/*2.1开始*/
+#slider:before{
+	content: "";
+	display: table;
+}
+#slider {
+	width:1366px;
+	height:550px;
+	position:relative;
+	overflow:hidden;
+}
+#slider #imgs {
+	position:absolute;
+	top: 0;  left: 0;
+	height:240px;
+}
+#slider #imgs li{
+	float:left;
+	z-index:0;
+}
+#slider #indexs {
+    position:absolute;
+    bottom:15px;
+    right:603px;
+}
+#slider #indexs li {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    background: #3e3e3e;
+    color: #fff;    
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    margin-left:10px;
+}
+#slider #indexs li:hover,#slider #indexs li.hover {
+    background:#b61b1f;
+}
